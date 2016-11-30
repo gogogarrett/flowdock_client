@@ -22,3 +22,11 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
+  3. Add the follow config to your app:
+
+    ```elixir
+    config :flowdock_client,
+      api_token: "abc-token-here-123",
+      org_name: "blake",
+      callback_module: FdTrivia.ProcessMessage
+    ```
