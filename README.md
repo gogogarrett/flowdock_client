@@ -102,3 +102,10 @@ iex(2)>
 ```
 
 With this message available to your callback module, you can handle the message however you see fit.
+
+
+## Sending messages
+
+```elixir
+FlowdockClient.Sender.send_message("trivia", "Who was the first Orange president?")
+```

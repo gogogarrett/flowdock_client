@@ -11,14 +11,15 @@ defmodule FlowdockClient.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :shotgun],
+    [applications: [:logger, :shotgun, :httpotion],
       mod: {FlowdockClient, []}]
   end
 
   defp deps do
     [
       {:shotgun, "~> 0.3.0"},
-      {:poison, "~> 3.0"}
+      {:poison, "~> 3.0"},
+      {:httpotion, "~> 3.0.2"}
     ]
   end
 end
