@@ -34,7 +34,7 @@ defmodule FlowdockClient.Listener do
       GenServer.cast(:testy, {:handle_flowdock_message, json})
       :ok
     else
-      _ -> IO.inspect("error")
+      _ -> nil
     end
   end
 
