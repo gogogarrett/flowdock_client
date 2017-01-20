@@ -6,7 +6,7 @@ defmodule FlowdockClient.Sender do
     HTTPotion.post(
       "https://api.flowdock.com/flows/#{@org_name}/#{flow}/messages",
       [
-        body: "event=message&content=#{message}",
+        body: "event=message&content=#{URI.encode_www_form(message)}",
         headers: ["Content-Type": "application/x-www-form-urlencoded", "Authorization": prepare_auth_header(@api_token)]
       ]
     )
